@@ -1,0 +1,251 @@
+/* Cosmic Theme Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #e0e6ed;
+    overflow-x: hidden;
+}
+
+.cosmic-background {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0c0c1d 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 100%);
+    position: relative;
+}
+
+/* Animated Stars Background */
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #eee, transparent),
+        radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.8), transparent),
+        radial-gradient(1px 1px at 90px 40px, #fff, transparent),
+        radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.6), transparent),
+        radial-gradient(2px 2px at 160px 30px, rgba(255,255,255,0.9), transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px;
+    animation: twinkle 10s infinite;
+    z-index: 1;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
+}
+
+/* Header Styles */
+.stellar-header {
+    text-align: center;
+    padding: 2rem 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.stellar-header h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    margin-bottom: 0.5rem;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 20px rgba(255, 255, 255, 0.5); }
+    to { text-shadow: 0 0 30px rgba(255, 255, 255, 0.8), 0 0 40px rgba(135, 206, 250, 0.3); }
+}
+
+.stellar-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    font-style: italic;
+}
+
+/* Main Container */
+.stellar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+/* Panel Styles */
+.stellar-panel {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stellar-panel:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.stellar-panel h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #87ceeb;
+    text-shadow: 0 0 10px rgba(135, 206, 235, 0.3);
+}
+
+/* Input Group Styles */
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    padding: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #e0e6ed;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group textarea:focus,
+.input-group select:focus {
+    outline: none;
+    border-color: #87ceeb;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 10px rgba(135, 206, 235, 0.2);
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+    color: rgba(224, 230, 237, 0.6);
+}
+
+.input-group button {
+    width: 100%;
+    padding: 0.75rem;
+    background: linear-gradient(45deg, #4a90e2, #7b68ee);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.input-group button:hover {
+    background: linear-gradient(45deg, #357abd, #6a5acd);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(74, 144, 226, 0.3);
+}
+
+/* Data Display Styles */
+.data-display {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 1rem;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.data-display h3 {
+    color: #87ceeb;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.data-item {
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 3px solid #87ceeb;
+    border-radius: 5px;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.data-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.data-item h4 {
+    color: #fff;
+    margin-bottom: 0.25rem;
+}
+
+.data-item p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 0.25rem;
+}
+
+.data-item .meta {
+    font-size: 0.8rem;
+    color: #87ceeb;
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+    z-index: 2;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* Scrollbar Styling */
+.data-display::-webkit-scrollbar {
+    width: 6px;
+}
+
+.data-display::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.data-display::-webkit-scrollbar-thumb {
+    background: rgba(135, 206, 235, 0.5);
+    border-radius: 10px;
+}
+
+.data-display::-webkit-scrollbar-thumb:hover {
+    background: rgba(135, 206, 235, 0.7);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .stellar-container {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+    
+    .stellar-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .stellar-panel {
+        padding: 1rem;
+    }
+}
