@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OUTER STELLAR - Space Exploration</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">OUTER STELLAR</h1>
+            <p class="subtitle">Explore the Cosmos</p>
+        </header>
+
+        <nav class="navigation">
+            <button class="nav-btn active" data-section="home">Home</button>
+            <button class="nav-btn" data-section="planets">Planets</button>
+            <button class="nav-btn" data-section="stars">Stars</button>
+            <button class="nav-btn" data-section="galaxies">Galaxies</button>
+        </nav>
+
+        <main class="main-content">
+            <section id="home" class="content-section active">
+                <div class="hero">
+                    <h2>Welcome to the Universe</h2>
+                    <p>Discover the wonders of space, from distant planets to massive galaxies.</p>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h3>200 Billion+</h3>
+                            <p>Stars in our galaxy</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>8</h3>
+                            <p>Planets in our solar system</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>100 Billion+</h3>
+                            <p>Galaxies in the observable universe</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="planets" class="content-section">
+                <h2>Planetary System</h2>
+                <div class="planets-grid">
+                    <div class="planet-card" data-planet="mercury">
+                        <div class="planet mercury"></div>
+                        <h3>Mercury</h3>
+                        <p>Closest to the Sun</p>
+                    </div>
+                    <div class="planet-card" data-planet="venus">
+                        <div class="planet venus"></div>
+                        <h3>Venus</h3>
+                        <p>Hottest planet</p>
+                    </div>
+                    <div class="planet-card" data-planet="earth">
+                        <div class="planet earth"></div>
+                        <h3>Earth</h3>
+                        <p>Our home planet</p>
+                    </div>
+                    <div class="planet-card" data-planet="mars">
+                        <div class="planet mars"></div>
+                        <h3>Mars</h3>
+                        <p>The red planet</p>
+                    </div>
+                    <div class="planet-card" data-planet="jupiter">
+                        <div class="planet jupiter"></div>
+                        <h3>Jupiter</h3>
+                        <p>Largest planet</p>
+                    </div>
+                    <div class="planet-card" data-planet="saturn">
+                        <div class="planet saturn"></div>
+                        <h3>Saturn</h3>
+                        <p>Planet with rings</p>
+                    </div>
+                    <div class="planet-card" data-planet="uranus">
+                        <div class="planet uranus"></div>
+                        <h3>Uranus</h3>
+                        <p>Ice giant</p>
+                    </div>
+                    <div class="planet-card" data-planet="neptune">
+                        <div class="planet neptune"></div>
+                        <h3>Neptune</h3>
+                        <p>Windiest planet</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="stars" class="content-section">
+                <h2>Stellar Objects</h2>
+                <div class="stars-container">
+                    <div class="star-field" id="starField"></div>
+                    <div class="star-info">
+                        <h3>Interactive Star Field</h3>
+                        <p>Click on stars to learn more about different stellar classifications:</p>
+                        <div class="star-types">
+                            <div class="star-type">
+                                <span class="star-sample red-giant"></span>
+                                <span>Red Giant</span>
+                            </div>
+                            <div class="star-type">
+                                <span class="star-sample main-sequence"></span>
+                                <span>Main Sequence</span>
+                            </div>
+                            <div class="star-type">
+                                <span class="star-sample white-dwarf"></span>
+                                <span>White Dwarf</span>
+                            </div>
+                            <div class="star-type">
+                                <span class="star-sample blue-giant"></span>
+                                <span>Blue Giant</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="galaxies" class="content-section">
+                <h2>Galactic Structures</h2>
+                <div class="galaxy-showcase">
+                    <div class="galaxy-card">
+                        <div class="galaxy spiral"></div>
+                        <h3>Spiral Galaxy</h3>
+                        <p>Like our Milky Way, featuring spiral arms and a central bulge.</p>
+                    </div>
+                    <div class="galaxy-card">
+                        <div class="galaxy elliptical"></div>
+                        <h3>Elliptical Galaxy</h3>
+                        <p>Smooth, oval-shaped galaxies with older star populations.</p>
+                    </div>
+                    <div class="galaxy-card">
+                        <div class="galaxy irregular"></div>
+                        <h3>Irregular Galaxy</h3>
+                        <p>Asymmetrical galaxies often disturbed by gravitational forces.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 OUTER STELLAR - Exploring the Universe</p>
+        </footer>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="modalTitle"></h3>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
