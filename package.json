@@ -1,0 +1,19 @@
+{
+  "name": "outer-stellar",
+  "version": "1.0.0",
+  "description": "Für Software Entwicklung, Datenbanken und Kreativität - A space-themed application for software development, databases, and creativity",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node test.js"
+  },
+  "keywords": ["space", "astronomy", "database", "creativity", "software-development"],
+  "author": "Outer Stellar Team",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.0",
+    "sqlite3": "^5.1.0",
+    "express-static": "^1.2.6"
+  }
+}

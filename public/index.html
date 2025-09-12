@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outer Stellar - Für Software Entwicklung, Datenbanken und Kreativität</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="cosmic-background">
+        <div class="stars"></div>
+        
+        <header class="stellar-header">
+            <h1>🌌 OUTER STELLAR</h1>
+            <p>Für Software Entwicklung, Datenbanken und Kreativität</p>
+        </header>
+
+        <main class="stellar-container">
+            <!-- Software Development Section -->
+            <section class="stellar-panel" id="development-panel">
+                <h2>🚀 Software Entwicklung</h2>
+                <div class="panel-content">
+                    <div class="input-group">
+                        <input type="text" id="project-name" placeholder="Projektname...">
+                        <textarea id="project-description" placeholder="Projektbeschreibung..."></textarea>
+                        <button onclick="addProject()">Projekt hinzufügen</button>
+                    </div>
+                    <div class="data-display" id="projects-list">
+                        <h3>Aktive Projekte:</h3>
+                        <div id="projects-container"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Database Section -->
+            <section class="stellar-panel" id="database-panel">
+                <h2>🌟 Astronomische Datenbank</h2>
+                <div class="panel-content">
+                    <div class="input-group">
+                        <input type="text" id="object-name" placeholder="Objektname...">
+                        <select id="object-type">
+                            <option value="">Objekttyp wählen...</option>
+                            <option value="star">Stern</option>
+                            <option value="planet">Planet</option>
+                            <option value="galaxy">Galaxie</option>
+                            <option value="nebula">Nebel</option>
+                            <option value="cluster">Sternhaufen</option>
+                        </select>
+                        <input type="text" id="constellation" placeholder="Sternbild...">
+                        <input type="number" id="magnitude" placeholder="Helligkeit (mag)" step="0.1">
+                        <input type="text" id="coordinates" placeholder="Koordinaten...">
+                        <textarea id="object-notes" placeholder="Notizen..."></textarea>
+                        <button onclick="addStellarObject()">Objekt hinzufügen</button>
+                    </div>
+                    <div class="data-display" id="objects-list">
+                        <h3>Astronomische Objekte:</h3>
+                        <div id="objects-container"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Creativity Section -->
+            <section class="stellar-panel" id="creativity-panel">
+                <h2>🎨 Kreative Ideen</h2>
+                <div class="panel-content">
+                    <div class="input-group">
+                        <input type="text" id="idea-title" placeholder="Ideen-Titel...">
+                        <textarea id="idea-description" placeholder="Beschreibung der Idee..."></textarea>
+                        <select id="idea-category">
+                            <option value="">Kategorie wählen...</option>
+                            <option value="visualization">Visualisierung</option>
+                            <option value="animation">Animation</option>
+                            <option value="interactive">Interaktiv</option>
+                            <option value="art">Digitale Kunst</option>
+                            <option value="story">Geschichten</option>
+                        </select>
+                        <input type="text" id="idea-inspiration" placeholder="Inspiration...">
+                        <button onclick="addCreativeIdea()">Idee hinzufügen</button>
+                    </div>
+                    <div class="data-display" id="ideas-list">
+                        <h3>Kreative Sammlungen:</h3>
+                        <div id="ideas-container"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>🌠 Verbindet Software, Daten und Kreativität im Universum der Möglichkeiten</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
